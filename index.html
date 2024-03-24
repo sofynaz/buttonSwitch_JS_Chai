@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Background color Switcher</title>
+    <style>
+        .button {
+            height: 50px;
+            width: 50px;
+            border: 2px solid rgb(242, 12, 12);
+            padding: 25px;
+            margin-right: 10px;
+            position: relative;
+            top: 25px;
+            margin-left: 25px;
+            border-radius: 50px;
+            background: rgb(248, 149, 149);
+            box-shadow: 10px 5px 5px red;
+            color: aliceblue;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Color Switcher</h1>
+    <div class="container">
+        <span class="button" id="goldenrod"> goldenrod</span>
+        <span class="button" id="magenta">magenta </span>
+        <span class="button" id="blue"> blue</span>
+        <span class="button" id="yellow">yellow </span>
+    </div>
+
+
+    <script>
+        const buttons = document.querySelectorAll('.button')
+        const body = document.querySelector('body')
+        buttons.forEach(function (btn) {
+            console.log(btn);
+            btn.addEventListener('click', function (e) {
+                console.log(e);
+                console.log(e.target);
+                if (e.target.id === 'goldenrod') {
+                    body.style.background = e.target.id;
+                }
+                if (e.target.id === 'magenta') {
+                    body.style.background = e.target.id;
+
+                }
+                if (e.target.id === 'blue') {
+                    body.style.background = e.target.id;
+
+                }
+                if (e.target.id === 'yellow') {
+                    body.style.background = e.target.id;
+
+                }
+            })
+        })
+    </script>
+
+</body>
+
+</html>
